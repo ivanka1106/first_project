@@ -1,13 +1,17 @@
-point = (1, 0)
+def factorial(n):
+    
+    
+    print("Виклик функції factorial з n = ", n)
+    if n==1:
+        
+        
+        
+        print("Базовий випадок, n = 1, повернення 1")
+        return 1
+    else:
+        result = n * factorial(n-1)
+        print("Повернення результату для n = ", n, ": ", result)
+        return result
 
-match point:
-    case (0, 0):
-        print("Точка в центрі координат")  
-    case (0, y):
-        print(f"Точка лежить на осі Y: y={y}")  
-    case (x, 0):
-        print(f"Точка лежить на осі X: x={x}") 
-    case (x, y):
-        print(f"Точка має координати:  x={x}, y={y}") 
-    case _:
-        print("Це не точка")
+print(factorial(5))
+
